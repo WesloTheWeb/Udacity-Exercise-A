@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import UserNames from './components/UserNames';
+import MovieList from './components/MovieList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/*
+Use React and the data below to display a list of users alongside their favorite movies.
+
+For detailed instructions, refer to instructions.md.
+*/
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <section className="movieList">
+          <h2>Favorite Movies</h2>
+          <MovieList />
+        </section>
+
+        <section className="userContainer">
+          <div className="nameContainer">
+           <UserNames />
+           <p>who</p>
+          </div>
+
+        </section>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
